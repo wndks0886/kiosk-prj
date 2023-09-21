@@ -1,11 +1,10 @@
 import './App.css';
+import LoginEdit from "./main/Login/login.component";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-          //commit test
-      </header>
+      <LoginEdit/>
     </div>
   );
 }
