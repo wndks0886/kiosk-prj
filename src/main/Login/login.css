@@ -1,1 +1,56 @@
 
+.loginPage{
+    margin: 80px auto auto;
+    width: 500px;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+
+.loginContents{
+    width: 300px;
+    margin: 50px auto auto;
+}
+
+.idArea{
+    height: 50px;
+    margin: auto;
+}
+
+.pwArea{
+    height: 50px;
+    margin: auto;
+}
+
+.idArea .inputId{
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.pwArea .inputPw{
+    width: 300px;
+    height: 30px;
+    margin: auto;
+}
+
+.idArea .inputId .form-control{
+    font-size: 0.8rem;
+}
+.idArea .inputId .input-group-text{
+    font-size: 0.8rem;
+}
+
+.pwArea .inputPw .form-control{
+    font-size: 0.8rem;
+}
+.pwArea .inputPw .input-group-text{
+    font-size: 0.8rem;
+}
+
+.btn-secondary {
+    width: 100%;
+}
+.btn-primary{
+    width: 100%;
+}
