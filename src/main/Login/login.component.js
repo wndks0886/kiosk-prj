@@ -3,14 +3,15 @@ import {useNavigate} from "react-router-dom";
 import {InputGroup} from "react-bootstrap";
 import {Form} from "react-bootstrap";
 import {useState} from "react";
+import SignUp from "../SignUp/signUp.component";
+
 
 const LoginEdit = () => {
 
     const navigate = useNavigate(); //page 이동 변수
     const [idValue,setId] = useState(''); //id usState
     const [pwValue,setPw] = useState(''); //pw usState
-    let getId = '';
-    let getPw = '';
+
     const saveUserId= (event) =>{
         setId(event.target.value);
     }
@@ -18,12 +19,15 @@ const LoginEdit = () => {
     const saveUserPw = (event) =>{
         setPw(event.target.value);
     }
+
     const loginValidation = () => {
         console.log('getID and Pw',idValue,pwValue); //메인 페이지 이동 전 value값 전달
         navigate('/kiosk'); //키오스크 메인 페이지 이동
-
     }
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
 
     return (
@@ -39,8 +43,8 @@ const LoginEdit = () => {
                             value={idValue}
                             onChange={saveUserId}
                             placeholder="Recipient's username"
-                            aria-label="Recipient's username"
-                            aria-describedby="basic-addon2"
+                            aria-describedby='basic-addon2'
+                            autoComplete='off'
                         />
                         <InputGroup.Text id="basic-addon2">@kiosk.co.kr</InputGroup.Text>
                     </InputGroup>
@@ -61,7 +65,7 @@ const LoginEdit = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col">
-                                <button type="button" className="btn btn-secondary">sign up</button>
+                                <button type="button" className="btn btn-secondary" onClick={openModal}>sign up</button>
                             </div>
                             <div className="col">
                                 <button type="button" className="btn btn-primary" onClick={loginValidation}>login</button>
@@ -70,6 +74,7 @@ const LoginEdit = () => {
                 </div>
                 </div>
             </div>
+            <SignUp isOpen={isModalOpen} closeModal={closeModal}/>
         </div>
 
     ) // return

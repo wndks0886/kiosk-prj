@@ -1,0 +1,16 @@
+.signUpContent{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.invalNm-input{
+    color: red;
+    width: 300px;
+    margin: auto;
+    font-size: 0.2rem;
+    padding: 0.3rem 0 0 0.3rem;
+}
+
+.area{
+    margin-top: 0.5rem;
+}
