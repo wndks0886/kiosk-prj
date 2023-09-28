@@ -4,6 +4,7 @@ import LoginEdit from "./main/Login/login.component";
 import KioskMain from "./main/KioskMain/kioskMain";
 
 function App() {
+
   return (
     <div className="App">
         <Router>

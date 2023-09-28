@@ -25,6 +25,19 @@ const SignUp= ({isOpen,closeModal}) =>{
       }
   }
 
+    const fetchModelData = () => {
+        fetch('http://localhost:8080/member/memberlist')
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(myJson) {
+                console.log(JSON.stringify(myJson));
+            });
+    };
+
+
+
+
     return (
         <Modal
             show={isOpen}
@@ -81,7 +94,7 @@ const SignUp= ({isOpen,closeModal}) =>{
         </div>
     </Modal.Body>
     <Modal.Footer>
-        <Button variant="secondary" onClick={closeModal}>
+        <Button variant="secondary" onClick={fetchModelData}>
             Close
         </Button>
         <Button variant="primary" onClick={closeModal}>Sign In</Button>
